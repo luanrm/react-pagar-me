@@ -1,13 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import PagarMeWebView from './PagarMeWebView';
+import PagarMe from './PagarMe';
 
 const App = () => {
   return (
     <>
       <View style={{flex: 1}}>
-        <Text>React Native with Pagar me</Text>
-        <PagarMeWebView></PagarMeWebView>
+        <PagarMe></PagarMe>
       </View>
     </>
   );
