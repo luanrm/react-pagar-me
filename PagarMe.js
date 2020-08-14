@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { TextInput, TouchableOpacity, Text } from 'react-native';
+ajustesimport {TouchableOpacity, Text } from 'react-native';
 import axios from 'axios';
 import { Picker } from '@react-native-community/picker';
 import AwesomeAlert from 'react-native-awesome-alerts';
-import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
+import { LiteCreditCardInput } from "react-native-credit-card-input";
 
 export default class PagarMe extends Component {
 
   state = {
     showAlert: false,
-    api_key: "api_key",
+    api_key: "",
     amount: 100000,
     installments: 1,
     // 5369008745460334
@@ -57,15 +57,6 @@ export default class PagarMe extends Component {
     ],
   }
 
-  // componentDidMount() {
-  //   axios.get('https://127.0.0.1:5001/customer')
-  //     .then(response => {
-  //       console.log(response);
-  //       this.setState({ card_number: number })
-  //     }).catch(error => { console.log(error); });
-
-  // }
-
   showAlert = () => {
     this.setState({
       showAlert: true
@@ -92,7 +83,7 @@ export default class PagarMe extends Component {
     return (
       <>
 
-        <CreditCardInput
+        <LiteCreditCardInput
           labels={{ number: "Numero do cartão", expiry: "Expiração", cvc: "CVC/CCV" }}
           onChange={(response) => {
             this.setState({
