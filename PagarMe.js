@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-ajustesimport {TouchableOpacity, Text } from 'react-native';
+import {TouchableOpacity, Text } from 'react-native';
 import axios from 'axios';
 import { Picker } from '@react-native-community/picker';
 import AwesomeAlert from 'react-native-awesome-alerts';
